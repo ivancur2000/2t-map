@@ -26,7 +26,16 @@ class Stories extends Model
         return $this->belongsTo('App\Models\Category');
     }
     public function requirements(){
-        return $this->belongsTo('App\Models\Requirements');
+        return $this->belongsTo('App\Models\Requirement');
+    }
+    public function goals(){
+        return $this->belongsTo('App\Models\Goal');
+    }
+    public function audiences(){
+        return $this->belongsTo('App\Models\Audience');
+    }
+    public function chapters(){
+        return $this->belongsTo('App\Models\Chapter');
     }
     //relacion n a n
     public function users_students() {

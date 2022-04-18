@@ -73,4 +73,7 @@ class User extends Authenticatable
     public function Stories_enrolled(){ 
         return $this->belongsTo('App\Models\Stories');
     }
+    public function lessons(){
+        return $this->belongsToMany('App\Models\Lesson');
+    }
 }

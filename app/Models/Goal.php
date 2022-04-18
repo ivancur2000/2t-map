@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Requirements extends Model
+class Goal extends Model
 {
     use HasFactory;
-    //relacion 1 a n inversa
-    public function stories(){
+      //relacion 1 a n inversa
+      public function stories(){
         return $this->belongsTo('App\Models\Stories');
     }
 }
