@@ -41,4 +41,11 @@ class Stories extends Model
     public function users_students() {
         return $this->belongsToMany('App\Models\User');
     }
+    // relacion 1 a 1 polimorfica
+    public function resource(){
+        return $this->morphOne('App\Models\Resource','resourceable');
+    }
+    public function lessons(){
+        return $this->hasManyThrough('App\Models\Lessons','App\Models\Chapter');
+    }
 }

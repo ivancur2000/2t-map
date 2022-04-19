@@ -66,6 +66,12 @@ class User extends Authenticatable
     public function Stories_dictated(){ 
         return $this->hasMany('App\Models\Stories');
     }
+    public function comments(){ 
+        return $this->hasMany('App\Models\Comment');
+    }
+    public function likes(){ 
+        return $this->hasMany('App\Models\Like');
+    }
     public function reviews(){
         return $this->hasMany('App\Models\Review');
     }
