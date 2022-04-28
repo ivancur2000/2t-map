@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Like extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
     const LIKE=1;
     const DISLIKE=2;
     public function likeable(){

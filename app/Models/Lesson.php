@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lesson extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
     //relacion 1 a 1
     public function descriptions(){
         return $this->hasOne('App\Models\Description');
