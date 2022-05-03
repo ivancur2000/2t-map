@@ -11,6 +11,6 @@ class Goal extends Model
     protected $guarded = ['id'];
       //relacion 1 a n inversa
       public function stories(){
-        return $this->belongsTo('App\Models\Stories');
+        return $this->belongsTo('App\Models\Story');
     }
 }

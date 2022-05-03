@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Requirements;
+use App\Models\Requirement;
 class RequirementSeeder extends Seeder
 {
     /**
@@ -14,13 +14,13 @@ class RequirementSeeder extends Seeder
      */
     public function run()
     {
-        Requirements::create([
+        Requirement::create([
             'name'=>'Edad 3-10(nivel basico)',
          ]);
-         Requirements::create([
+         Requirement::create([
             'name'=>'Edad 11-18 (nivel intermedio)',
          ]);
-         Requirements::create([
+         Requirement::create([
             'name'=>'Edad 19 + (nivel avanzado)',
          ]);
     }

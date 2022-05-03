@@ -64,21 +64,21 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Profile');
     }
     //relacion 1 a n
-    public function Stories_dictated(){ 
-        return $this->hasMany('App\Models\Stories');
+    public function Stories_dictated(){
+        return $this->hasMany('App\Models\Story');
     }
-    public function comments(){ 
+    public function comments(){
         return $this->hasMany('App\Models\Comment');
     }
-    public function likes(){ 
+    public function likes(){
         return $this->hasMany('App\Models\Like');
     }
     public function reviews(){
         return $this->hasMany('App\Models\Review');
     }
     //relacion n a n
-    public function Stories_enrolled(){ 
-        return $this->belongsTo('App\Models\Stories');
+    public function Stories_enrolled(){
+        return $this->belongsToMany('App\Models\Story');
     }
     public function lessons(){
         return $this->belongsToMany('App\Models\Lesson');

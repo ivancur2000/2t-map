@@ -17,8 +17,8 @@ class Lesson extends Model
     public function chapters(){
         return $this->belongsTo('App\Models\Chapter');
     }
-    public function plataforms(){
-        return $this->belongsTo('App\Models\Plataform');
+    public function platforms(){
+        return $this->belongsTo('App\Models\Platform');
     }
     // relacion n a n 
     public function users(){

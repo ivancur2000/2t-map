@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stories extends Model
+class Story extends Model
 {
     use HasFactory;
     protected $guarded = ['id','status'];
+
+    protected $table = 'stories';
+
     const BORRADOR=1;
     const REVISION=2;
     const PUBLICADO=3;
@@ -16,7 +19,7 @@ class Stories extends Model
     public function reviews(){
         return $this->hasMany('App\Models\Review');
     }
-    //relacion 1 a n inversa 
+    //relacion 1 a n inversa
     public function user_teacher() {
         return $this->belongsTo('App\Models\User','User_id');
     }
@@ -47,6 +50,6 @@ class Stories extends Model
         return $this->morphOne('App\Models\Resource','resourceable');
     }
     public function lessons(){
-        return $this->hasManyThrough('App\Models\Lessons','App\Models\Chapter');
+        return $this->hasManyThrough('App\Models\Lesson','App\Models\Chapter');
     }
 }

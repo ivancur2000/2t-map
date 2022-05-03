@@ -11,6 +11,6 @@ class Category extends Model
     protected $guarded = ['id'];
       //relacion 1 a n
       public function stories(){
-        return $this->hasMany('App\Models\Stories');
+        return $this->hasMany('App\Models\Story');
     }
 }
