@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<a class="btn btn-primary" href="{{ route('category.create') }}">Agregar</a>
+<a class="btn btn-primary" href="{{ route('admin.category.create') }}">Agregar</a>
 <table class="table">
     <thead>
         <tr>
@@ -21,8 +21,8 @@
             <td>{{ $category->id }}</td>
             <td>{{ $category->name }}</td>
             <td class="d-flex">
-                <a class="btn btn-success mx-2" href="{{ route('category.edit', $category) }}">Editar</a>
-                <form action="{{ route('category.destroy', $category) }}" method="POST">
+                <a class="btn btn-success mx-2" href="{{ route('admin.category.edit', $category) }}">Editar</a>
+                <form action="{{ route('admin.category.destroy', $category) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Borrar</button>

@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('platform.store') }}" method="POST">
+<form action="{{ route('admin.platform.store') }}" method="POST">
     @csrf
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Nombre:</label>

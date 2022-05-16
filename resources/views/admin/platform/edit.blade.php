@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('platform.update', $platform) }}" method="POST">
+<form action="{{ route('admin.platform.update', $platform) }}" method="POST">
     @method('PUT')
     @csrf
     <div class="mb-3">
