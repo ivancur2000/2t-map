@@ -16,9 +16,14 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
-        </div>
+    <body class="font-inter antialiased bg-slate-100 text-slate-600">
+        <main class="bg-white">
+            <div class="relative flex">
+                <div class="w-full md:w-1/2">
+                    {{ $slot }}
+                </div>
+                <div class="hidden md:block  top-0 bottom-0 right-0 md:w-1/2 auth-bg fixed"></div>
+            </div>
+        </main>
     </body>
 </html>
