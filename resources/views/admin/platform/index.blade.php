@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<a class="btn btn-primary" href="{{ route('platform.create') }}">Agregar</a>
+<a class="btn btn-primary" href="{{ route('admin.platform.create') }}">Agregar</a>
 <table class="table">
     <thead>
         <tr>
@@ -21,8 +21,8 @@
             <td>{{ $platform->id }}</td>
             <td>{{ $platform->name }}</td>
             <td class="d-flex">
-                <a class="btn btn-success mx-2" href="{{ route('platform.edit', $platform) }}">Editar</a>
-                <form action="{{ route('platform.destroy', $platform) }}" method="POST">
+                <a class="btn btn-success mx-2" href="{{ route('admin.platform.edit', $platform) }}">Editar</a>
+                <form action="{{ route('admin.platform.destroy', $platform) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Borrar</button>

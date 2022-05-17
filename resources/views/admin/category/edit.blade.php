@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('category.update', $category) }}" method="POST">
+<form action="{{ route('admin.category.update', $category) }}" method="POST">
     @method('PUT')
     @csrf
     <div class="mb-3">

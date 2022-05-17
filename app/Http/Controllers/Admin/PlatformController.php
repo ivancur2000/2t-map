@@ -43,7 +43,7 @@ class PlatformController extends Controller
 
         Platform::create($request->all());
 
-        return redirect()->route('platform.index');
+        return redirect()->route('admin.platform.index');
     }
 
     /**
@@ -86,7 +86,7 @@ class PlatformController extends Controller
             'name' => $request->name
         ]);
 
-        return redirect()->route('platform.index');
+        return redirect()->route('admin.platform.index');
     }
 
     /**
@@ -98,6 +98,6 @@ class PlatformController extends Controller
     public function destroy(Platform $platform)
     {
         $platform->delete();
-        return redirect()->route('platform.index');
+        return redirect()->route('admin.platform.index');
     }
 }
