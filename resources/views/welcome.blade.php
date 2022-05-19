@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Basic - Tailwind CSS Template</title>
+    <title>Pied Piper</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,8 +44,8 @@
                 <div class="row">
                     <div class="w-full">
                         <nav class="flex items-center justify-between navbar navbar-expand-lg">
-                            <a class="mr-4 navbar-brand" href="index.html">
-                                <img src="{{ asset('img/template/logo.svg') }}" alt="Logo">
+                            <a class="mr-4 navbar-brand" href="/">
+                                <img width="50px" src="{{ asset('img/LogoSidebar.png') }}" alt="Logo">
                             </a>
                             <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
                                 data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
@@ -82,8 +82,12 @@
 
                             <div
                                 class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
-                                <a class="main-btn gradient-btn" data-scroll-nav="0" href="#" rel="nofollow">Download
-                                    Now</a>
+                                <a class="main-btn gradient-btn" data-scroll-nav="0" href="#" rel="nofollow">
+                                    Login
+                                </a>
+                                <a class="main-btn gradient-btn" data-scroll-nav="0" href="#" rel="nofollow">
+                                    Register
+                                </a>
                             </div>
                         </nav> <!-- navbar -->
                     </div>

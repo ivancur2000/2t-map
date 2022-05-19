@@ -1805,6 +1805,10 @@ input[type=search]::-webkit-search-results-decoration {
   width: 5rem;
 }
 
+.w-7{
+  width: 1.75rem;
+}
+
 .w-4\/5{
   width: 80%;
 }
