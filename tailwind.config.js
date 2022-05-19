@@ -78,6 +78,10 @@ module.exports = {
             zIndex: {
                 60: "60",
             },
+            colors: {
+                'theme-color': '#361CC1',
+                'theme-color-2': '#FE7A7B'
+            }
         },
     },
 

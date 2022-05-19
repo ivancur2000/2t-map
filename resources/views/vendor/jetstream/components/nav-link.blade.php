@@ -1,4 +1,4 @@
-@props(['active'])
+@props(['active' => false])
 
 @php
 $classContainer = ($active ?? false)
@@ -9,8 +9,15 @@ $classLink = ($active ?? false)
             : 'block text-slate-200 hover:text-white truncate transition duration-150 hover:text-slate-200';
 @endphp
 
-<li {{ $attributes->merge(['class' => $classContainer]) }}>
+<li class="{{ $classContainer }}">
     <a {{ $attributes->merge(['class' => $classLink]) }}>
-        {{ $slot }}
+        <div class="flex items-center">
+            @if (isset($icon))
+                {{ $icon }}
+            @endif
+            <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                {{ $slot }}
+            </span>
+        </div>
     </a>
 </li>

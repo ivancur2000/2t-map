@@ -18,10 +18,12 @@
 }
 
 @media screen and (max-width: theme('screens.lg')) {
-    [x-cloak="lg"] { display: none; }
+    [x-cloak="lg"] {
+        display: none;
+    }
 }
 
-.auth-bg{
+.auth-bg {
     background-image: url('../../public/img/book-image.jpg');
     background-position: center;
     background-size: cover;

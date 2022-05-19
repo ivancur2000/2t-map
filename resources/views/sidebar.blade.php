@@ -25,6 +25,14 @@
                 <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Pages</span>
             </h3>
             <ul class="mt-3">
+
+                <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')" >
+                    <x-slot name="icon">
+                        <i class="fa-solid fa-house shrink-0 h-6 w-6 text-xl"></i>
+                    </x-slot>
+                    Home
+                </x-jet-nav-link>
+
                 <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0" :class="page === '/' && 'bg-slate-900'">
                     <a class="block text-slate-200 hover:text-white truncate transition duration-150" :class="page === 'home' && 'hover:text-slate-200'" href="{{ route('home', ['id'=>1]) }}">
                         <div class="flex items-center">
